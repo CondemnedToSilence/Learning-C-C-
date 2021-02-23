@@ -1,15 +1,14 @@
 #include <stdio.h>
 int main()
 {
-    int a;
+    int x,y;
     char b[15];
-    scanf("%d\n",&a);
-    //the & sign is the address operator,gives location in memory to save value
-    scanf("%s",&b);
-    //note that the scanf stops taking input after a white space
-    //so sentences cant be taken with it.....for that use fgets
-    //or the format specifier %[^\n] can also be used where ^\n means except \n, ^ is negation
-    printf("%d\n",a+7);
-    printf("%s",b);
+
+    scanf("%3d %d %*f %5s",&x,&y,b);
+    //the numbers indicate maximum no. of character sto assign to variable
+    //the * indicates that the input should be ignored
+    //eg. for input 1234 0.876 lostworld
+    printf("%d %d %s",x,y,b);
+    // the output is 123 4 lostw
     return 0;
 }
